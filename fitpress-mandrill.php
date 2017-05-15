@@ -61,18 +61,18 @@ class FP_Mandrill {
 		return self::$_instance;
 	}
 
-	public function __construct(){
+	public function __construct() {
 
 		$this->mandrill_username = 'Flicker Leap';
 		$this->mandrill_api_key = 'BkEZ2yJepLkakAIEz9cB-Q';
-		$this->mandrill_api_key = 'ZcqqrTPutE26yd6fgjyKUA';
+		// $this->mandrill_api_key = 'ZcqqrTPutE26yd6fgjyKUA'; // Test key
 
 		add_action( 'phpmailer_init', array( $this, 'use_mandrill' ) );
 
 	}
 
 	public function use_mandrill( $phpmailer ) {
- 
+
 		$phpmailer->isSMTP();
 		$phpmailer->SMTPAuth = true;
 		$phpmailer->SMTPSecure = "tls";
