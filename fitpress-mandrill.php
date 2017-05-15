@@ -65,6 +65,7 @@ class FP_Mandrill {
 
 		$this->mandrill_username = 'Flicker Leap';
 		$this->mandrill_api_key = 'BkEZ2yJepLkakAIEz9cB-Q';
+		$this->mandrill_api_key = 'ZcqqrTPutE26yd6fgjyKUA';
 
 		add_action( 'phpmailer_init', array( $this, 'use_mandrill' ) );
 
